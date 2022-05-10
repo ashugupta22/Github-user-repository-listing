@@ -6,7 +6,7 @@ Created React project to display the Github repositories listing page by passing
     2. Display Github user repositories.
     3. Display 10 repositories per page.
     4. Use of pagination
-# Live project deployed link - [demo](demo)
+# Live project deployed link - [https://github-user-repo-listing.netlify.app/](https://github-user-repo-listing.netlify.app/)
 # How to run project locally
 ## Prerequisites 
 - Node.js
