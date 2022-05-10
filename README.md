@@ -15,7 +15,3 @@ Created React project to display the Github repositories listing page by passing
 ## Steps to run
 1. `npm init` to install all dependencies.
 2. `npm start` to run a local server and preview page.
-<<<<<<< HEAD
-
-=======
->>>>>>> 7f0e36c0c74d90273a41fdbf972bf3731f634ce7

@@ -38,7 +38,7 @@ function UserData() {
                 <div className='container-lg'>
                     <div className='row justify-content-start mt-5'>
                         <div className='col-2'>
-                            <img className='roundimg' src={users.avatar_url}></img>
+                            <img className='roundimg' src={users.avatar_url} alt="profile image"></img>
                         </div>
                         <div className='col-4 ms-5 my-auto fw-bold'>
                             <h3 className='t-blue'>{users.name}</h3>
