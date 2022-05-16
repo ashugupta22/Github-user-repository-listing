@@ -58,3 +58,37 @@ p{
     text-align: center;
     margin-top: 200px;
 }
+.search-bar{
+    width: 40%;
+    padding: 10px 20px;
+    border: 2px solid rgb(15, 60, 108);
+    font-weight: bold;
+    border-radius: 50px;
+}
+.search-bar:focus{
+    outline: none;
+}
+.profile-btn{
+    background-color: rgb(15, 60, 108);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* -----------media------------- */
+
+@media only screen and (max-width : 768px){
+    .search-bar{
+        width: 50%;
+        padding: 8px 16px;
+    }
+}
+
+@media only screen and (max-width : 568px){
+    .search-bar{
+        width: 80%;
+        padding: 8px 16px;
+    }
+}
