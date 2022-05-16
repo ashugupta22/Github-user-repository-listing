@@ -7,7 +7,7 @@ function Pagination ({handlePageClick}){
                 previousLabel={"<<"}
                 nextLabel={">>"}
                 breakLabel={"..."}
-                pageCount={9}
+                pageCount={6}
                 marginPagesDisplayed={2}
                 pageRangeDisplayed={6}
                 onPageChange={handlePageClick}

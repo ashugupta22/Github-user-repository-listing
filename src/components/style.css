@@ -54,10 +54,6 @@ p{
     background-color: rgb(239, 245, 245);
     color: rgb(15, 60, 108);
 }
-.loading{
-    text-align: center;
-    margin-top: 200px;
-}
 .search-bar{
     width: 40%;
     padding: 10px 20px;
@@ -75,6 +71,9 @@ p{
     border-radius: 5px;
     font-weight: bold;
     font-size: 16px;
+}
+.logo-pointer{
+    cursor: pointer;
 }
 
 /* -----------media------------- */

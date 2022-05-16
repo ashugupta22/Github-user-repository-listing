@@ -56,6 +56,11 @@ function UserData() {
         setRepos(reposFromServer);
     };
 
+//------------refresh page-----------------
+    function pagerefresh(){
+        window.location.reload(false);
+    }
+
     return (
         <>
             {!users.name ? (<SearchPage changeHandler={changeHandler} submitHandler={submitHandler} username={username} />) : " "}
@@ -63,6 +68,9 @@ function UserData() {
 
             <div className='container-fluid'>
                 <div className='container-lg'>
+                <div className="text-center">
+                    {!users.name ? " " :(<img className='logo-pointer mt-5' src="images/github-logo.png" alt="logo" onClick={pagerefresh}></img>)}
+                </div>
                     <div className='row justify-content-start mt-5'>
                         <div className='col-2'>
                             {!users.avatar_url ? " " : (<img className='roundimg' src={users.avatar_url} alt="profile image"></img>)}
