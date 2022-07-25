@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css';
-function SearchPage({ changeHandler, submitHandler,username}) {
+function SearchPage({ changeHandler, submitHandler,username, errors}) {
     return (
         <>
             <div className="container-lg">
@@ -10,6 +10,7 @@ function SearchPage({ changeHandler, submitHandler,username}) {
                 </div>
                 <div className="text-center">
                 <input className="search-bar" type="text" placeholder='Enter your GitHub username' value={username} onChange={changeHandler}></input>
+                <h5 className="text-danger mt-4">{errors}</h5>
                 </div>
                 <div className="text-center mt-5">
                 <button className="profile-btn text-white" type='submit' onClick={submitHandler}><i className="me-3 fa-brands fa-github fa-lg"></i>Get Profile</button>

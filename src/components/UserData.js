@@ -3,12 +3,16 @@ import React, { useState } from 'react';
 import UserRepo from './UserRepo';
 import Pagination from './Pagination';
 import SearchPage from './SearchPage';
+import { BounceLoader } from 'react-spinners';
 // import Loading from './Loading';
 function UserData() {
 
     const [users, setUsers] = useState([]);
     const [username, setUsername] = useState("");
     const [repos, setRepos] = useState([]);
+    const [errors, setErrors] = useState("");
+
+    const [loading, setLoading] = useState(false)
 
     const changeHandler = event => {
         setUsername(event.target.value);
@@ -19,9 +23,11 @@ function UserData() {
     const submitHandler = async (event) => {
         event.preventDefault();
         try {
-            // setLoading(false);
+            setLoading(true);
             profile = await fetch(`https://api.github.com/users/${username}`);
             data = await profile.json();
+            setLoading(false)
+            console.log(data);
 
             const profilerepo = await fetch(`${data.repos_url}?page=1&per_page=10`)
             const data2 = await profilerepo.json();
@@ -33,6 +39,7 @@ function UserData() {
         }
         catch (error) {
             console.log(error);
+            setErrors("Please Enter correct Username")
         }
 
     };
@@ -60,10 +67,16 @@ function UserData() {
     function pagerefresh(){
         window.location.reload(false);
     }
+    if(loading){
+        return( <div className='loaderwrapper'>
+        <BounceLoader />
+        </div>)
+       
+    }
 
     return (
         <>
-            {!users.name ? (<SearchPage changeHandler={changeHandler} submitHandler={submitHandler} username={username} />) : " "}
+            {!users.name ? (<SearchPage changeHandler={changeHandler} submitHandler={submitHandler} username={username} errors ={errors} />) : " "}
 
 
             <div className='container-fluid'>

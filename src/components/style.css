@@ -76,6 +76,14 @@ p{
     cursor: pointer;
 }
 
+.loaderwrapper{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+}
+
 /* -----------media------------- */
 
 @media only screen and (max-width : 768px){
